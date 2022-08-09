@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/block-one-layout-first/static/css/main.eb7b0929.css",
-    "main.js": "/block-one-layout-first/static/js/main.e87593b8.js",
+    "main.js": "/block-one-layout-first/static/js/main.404da9fc.js",
     "static/media/four-gift.svg": "/block-one-layout-first/static/media/four-gift.ec840085c1ec28268b14b2fcea052104.svg",
     "static/media/form-background.png": "/block-one-layout-first/static/media/form-background.72e419fe4275acefd2c3.png",
     "static/media/six-publishing.svg": "/block-one-layout-first/static/media/six-publishing.a5b62dc8dd62e9ab9f861bfab7ba672a.svg",
@@ -30,10 +30,10 @@
     "static/media/up-button.svg": "/block-one-layout-first/static/media/up-button.5f00c3339a051a0d4ba4fc8f1f871102.svg",
     "static/media/check-mark.svg": "/block-one-layout-first/static/media/check-mark.1ef455351cd1a2c41c9c.svg",
     "main.eb7b0929.css.map": "/block-one-layout-first/static/css/main.eb7b0929.css.map",
-    "main.e87593b8.js.map": "/block-one-layout-first/static/js/main.e87593b8.js.map"
+    "main.404da9fc.js.map": "/block-one-layout-first/static/js/main.404da9fc.js.map"
   },
   "entrypoints": [
     "static/css/main.eb7b0929.css",
-    "static/js/main.e87593b8.js"
+    "static/js/main.404da9fc.js"
   ]
 }

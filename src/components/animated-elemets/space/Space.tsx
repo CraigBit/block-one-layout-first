@@ -15,6 +15,9 @@ import { StripedPlanet } from './space-elements/StripedPlanet';
 
 export const Space = () => {
   const container = {
+    hidden: {
+      opacity: 0,
+    },
     mainEffect: {
       opacity: [0, 0, 1],
       transition: { duration: 2, times: [0, 0.3, 1] },
@@ -23,6 +26,7 @@ export const Space = () => {
   return (
     <motion.svg
       variants={container}
+      initial='hidden'
       animate='mainEffect'
       overflow='visible'
       width='864'

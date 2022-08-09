@@ -1,0 +1,179 @@
+@import '../../../global-styles/App.scss';
+
+.footer {
+  grid-area: footer;
+  padding: 0px 15px 0px 15px;
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1680px) 1fr;
+  grid-template-rows: minmax(auto, 373px) minmax(auto, 256px);
+
+  &__subscribe {
+    grid-column: 2 / 3;
+    padding: 30px 0 67px 0;
+    background: url('../../../img/main/subscribe/form-background.png');
+    border-radius: 81px;
+
+    &-title {
+      font-family: $headersFont;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 138%;
+      text-align: center;
+      letter-spacing: 0.04em;
+      color: $additionalTextColor;
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      max-width: 406px;
+      font-size: 18px;
+      line-height: 150%;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: $additionalTextColor;
+      margin: 0 auto 40px;
+    }
+
+    .form {
+      &__body {
+        margin: 0 0 20px;
+        padding-left: 25.53%;
+
+        &-email {
+          padding: 18px 20px;
+          width: 540px;
+          max-height: 60px;
+          background: $additionalTextColor;
+          border: 1px solid $additionalHighlightColor;
+          border-radius: 15px;
+          outline: none;
+          margin-right: 30px;
+          font-size: 20px;
+          line-height: 120%;
+          letter-spacing: 0.04em;
+          color: $mainTextColor;
+        }
+
+        &-submit {
+          padding: 18px 20px;
+          width: 360px;
+          max-height: 60px;
+          background: $mainHighlightColor;
+          border-radius: 15px;
+          cursor: pointer;
+          user-select: none;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 120%;
+          letter-spacing: 0.04em;
+          color: $additionalTextColor;
+        }
+      }
+
+      &__terms {
+        display: flex;
+        align-items: flex-start;
+        margin: 0 auto;
+        padding-left: 25.53%;
+
+        &-text {
+          max-width: 370px;
+          margin-left: 13px;
+          font-size: 15px;
+          line-height: 120%;
+          letter-spacing: 0.04em;
+          color: #d6d7dd;
+
+          &--highlighted {
+            color: $additionalTextColor;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__info {
+    padding: 70px 0px 65px 0px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1400px) 1fr;
+    grid-template-rows: 1fr;
+
+    &-nav {
+      grid-column: 2 / 3;
+      display: flex;
+      justify-content: space-between;
+
+      .nav {
+        &__socials-relative {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          left: 46px;
+        }
+
+        &__socials {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          &-label {
+            font-family: $headersFont;
+            font-size: 20px;
+            line-height: 135%;
+            letter-spacing: 0.03em;
+            color: $mainTextColor;
+            margin-bottom: 10px;
+          }
+
+          &-images {
+            display: flex;
+          }
+
+          &-image {
+            cursor: pointer;
+            &:not(:last-child) {
+              margin-right: 20px;
+            }
+            &--orange {
+              cursor: pointer;
+              filter: drop-shadow(0px 15px 30px rgba(218, 129, 25, 0.25));
+            }
+          }
+        }
+
+        &__menu-list {
+          display: flex;
+          margin-top: 22px;
+        }
+
+        &__menu-item {
+          &:not(:last-child) {
+            margin-right: 40px;
+          }
+        }
+
+        &__menu-link {
+          font-family: $headersFont;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 135%;
+          letter-spacing: 0.03em;
+          color: $headersColor;
+        }
+      }
+    }
+
+    &-copyright {
+      text-align: center;
+      grid-column: 2 / 3;
+      font-size: 20px;
+      line-height: 120%;
+      letter-spacing: 0.04em;
+      color: $mainTextColor;
+    }
+  }
+}

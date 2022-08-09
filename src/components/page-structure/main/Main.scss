@@ -1,0 +1,338 @@
+@import '../../../global-styles/App.scss';
+
+.main {
+  padding: 200px 15px 200px 15px;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1400px) 1fr;
+  background: no-repeat 50% 12.6%
+      url('../../../img/main/reasons/reasons-background.jpg'),
+    no-repeat 50% 54.2%
+      url('../../../img/main/certificate/certificate-background.jpg'),
+    no-repeat 50% 32.5% url('../../../img/main/plan/plan-background.jpg');
+
+  &__info {
+    grid-column: 2 / 3;
+    margin: 0 auto;
+    max-width: 790px;
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: $headersColor;
+    text-align: center;
+    letter-spacing: 0.05em;
+    padding-bottom: 200px;
+
+    &--highlighted {
+      color: $mainHighlightColor;
+    }
+  }
+
+  &__reasons {
+    grid-column: 2 / 3;
+    padding-bottom: 200px;
+
+    &-title {
+      text-align: center;
+      padding-bottom: 58px;
+    }
+
+    &-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+
+      .reason-card {
+        flex: 1 1 30%;
+        padding: 20px 35px 24px;
+        background: #ffffff;
+        box-shadow: 0px 5px 30px rgba(215, 211, 225, 0.5);
+        border-radius: 16px;
+
+        &__image {
+          margin-bottom: 8px;
+        }
+
+        &__text {
+          font-size: 20px;
+          line-height: 120%;
+          letter-spacing: 0.04em;
+          color: $mainTextColor;
+
+          &--highlighted {
+            color: #ff946e;
+            background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff),
+              linear-gradient(#ff946e, #ff946e);
+            background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+            background-repeat: no-repeat, no-repeat, repeat-x;
+            text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff,
+              0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff,
+              -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff,
+              -0.15em 0 #fff;
+            background-position: 0 95%, 100% 95%, 0 95%;
+          }
+        }
+      }
+    }
+  }
+
+  &__plan {
+    grid-column: 2 / 3;
+    padding-bottom: 200px;
+
+    &-title {
+      text-align: center;
+      padding-bottom: 90px;
+    }
+
+    &-steps {
+      display: flex;
+      min-height: 490px;
+    }
+
+    .steps {
+      position: relative;
+
+      &__stage {
+        position: relative;
+        z-index: 2;
+        display: flex;
+      }
+
+      &__image {
+        margin-right: 40px;
+      }
+
+      &__text {
+        font-size: 20px;
+        line-height: 120%;
+        letter-spacing: 0.04em;
+        color: $mainTextColor;
+        &--highlighted {
+          color: $mainHighlightColor;
+          background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff),
+            linear-gradient($mainHighlightColor, $mainHighlightColor);
+          background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+          background-repeat: no-repeat, no-repeat, repeat-x;
+          text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff,
+            0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff,
+            -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff,
+            -0.15em 0 #fff;
+          background-position: 0 97%, 100% 97%, 0 97%;
+        }
+      }
+
+      &__track {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+      }
+    }
+
+    .stage-one {
+      margin-right: 150px;
+    }
+
+    .stage-two {
+      align-self: center;
+      margin: 50px 124px 0px 0px;
+    }
+
+    .stage-three {
+      align-self: flex-end;
+    }
+  }
+
+  &__certificate {
+    grid-column: 2 / 3;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: space-between;
+
+    &-description {
+      padding-top: 50px;
+      max-width: 498px;
+
+      .description__title {
+        padding-bottom: 27px;
+      }
+
+      .description__text {
+        font-size: 18px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        color: $mainTextColor;
+
+        &-paragraph:not(:last-child) {
+          margin-bottom: 28px;
+        }
+      }
+    }
+  }
+
+  &__register {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 170px;
+
+    .discount {
+      min-height: 476px;
+      margin-top: 40px;
+      box-shadow: 0px 5px 15px rgba(20, 167, 114, 0.2);
+      display: flex;
+      flex-direction: column;
+      border-radius: 40px;
+      position: relative;
+
+      &--white {
+        padding: 130px 59px 0px;
+        flex: 1 1 100%;
+        border-radius: 40px 40px 0px 0px;
+        border: 3px solid $mainHighlightColor;
+      }
+
+      &__covering {
+        position: absolute;
+        left: 105px;
+        top: -14px;
+        &-front {
+          fill: $mainHighlightColor;
+        }
+        &-text {
+          fill: $additionalTextColor;
+          font-family: $headersFont;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 140%;
+          letter-spacing: 0.04em;
+        }
+      }
+
+      &__label {
+        font-size: 20px;
+        line-height: 12%;
+        letter-spacing: 0.05em;
+        color: $mainTextColor;
+        margin-bottom: 50px;
+      }
+
+      &__price {
+        display: flex;
+        align-items: flex-start;
+
+        &--discounted {
+          font-size: 96px;
+          line-height: 114px;
+          margin: 0px 15px 0px 0px;
+        }
+        &--original {
+          font-weight: 500;
+          font-size: 30px;
+          text-decoration: line-through;
+          letter-spacing: 0.05em;
+          margin: 20px 0px 0px 0px;
+        }
+        color: #000000;
+        margin-bottom: 30px;
+      }
+
+      &__details {
+        font-size: 20px;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+        color: $mainTextColor;
+      }
+
+      &--colored {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $mainHighlightColor;
+        border-radius: 0px 0px 40px 40px;
+        border: 3px solid $mainHighlightColor;
+        padding: 16.5px 59px;
+      }
+
+      &__link {
+        font-family: $headersFont;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: 0.04em;
+        color: $additionalTextColor;
+      }
+
+      &__socials {
+        display: flex;
+        gap: 16px;
+      }
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      &__title {
+        margin: 0px 30px 50px 0px;
+      }
+
+      &__body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__terms {
+        margin: 30px 0px 50px 0px;
+        display: flex;
+        align-items: flex-start;
+
+        &-text {
+          margin-left: 13px;
+          max-width: 370px;
+          font-size: 15px;
+          line-height: 120%;
+          letter-spacing: 0.04em;
+          color: $additionalHighlightColor;
+
+          &--highlighted {
+            color: $mainHighlightColor;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &__submit-button {
+        background: #e02d05;
+        box-shadow: 0px 15px 30px rgba(218, 71, 25, 0.25);
+        border-radius: 15px;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.04em;
+        padding: 18px 46px;
+        max-width: 300px;
+        cursor: pointer;
+        user-select: none;
+        color: $additionalTextColor;
+      }
+    }
+  }
+  &__faq {
+    grid-column: 2 / 3;
+
+    &-title {
+      text-align: center;
+      margin: 0px 0px 50px 0px;
+    }
+
+    &-questions {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

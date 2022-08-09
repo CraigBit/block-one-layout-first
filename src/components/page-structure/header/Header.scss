@@ -1,0 +1,114 @@
+@import '../../../global-styles/App.scss';
+
+.header {
+  padding: 30px 15px 0px 15px;
+  margin: 0 auto;
+  position: relative;
+  grid-area: header;
+  display: grid;
+  @media (min-width: 1920px) {
+    grid-template-columns: minmax(auto, 260px) minmax(auto, 1400px) minmax(
+        auto,
+        260px
+      );
+  }
+  grid-template-columns: 1fr minmax(auto, 1400px) 1fr;
+  grid-template-rows: minmax(auto, 60px) minmax(auto, 253px) minmax(auto, 475px);
+
+  &__space {
+    position: absolute;
+    grid-column: 2 / span 2;
+    right: 0;
+    top: 1;
+    z-index: -1;
+  }
+
+  &__girl {
+    position: absolute;
+    grid-column: 2 / span 2;
+    right: 15.5%;
+    top: 58%;
+    z-index: -1;
+    @media (min-width: 1920px) {
+      right: 13%;
+    }
+  }
+
+  &__menu {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-login {
+      font-size: 20px;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: 0.04em;
+      border: 1px solid $headersColor;
+      border-radius: 15px;
+      padding: 10px 57px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 44px;
+      color: $headersColor;
+      background-color: $additionalTextColor;
+    }
+  }
+
+  &__announcement {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    max-width: 650px;
+
+    &-slonum {
+      font-size: 15px;
+      line-height: 166%;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $additionalHighlightColor;
+    }
+
+    &-title {
+      font-family: $headersFont;
+      font-weight: 700;
+      font-size: 55px;
+      line-height: 122%;
+      color: $headersColor;
+      margin-bottom: 40px;
+    }
+
+    &-description {
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: 0.05em;
+      color: $mainTextColor;
+      margin-bottom: 60px;
+    }
+
+    &-ui {
+      display: flex;
+
+      .ui {
+        &__button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $mainHighlightColor;
+          border-radius: 15px;
+          padding: 18px 80px;
+          max-width: 300px;
+          max-height: 60px;
+          color: $additionalTextColor;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 120%;
+          letter-spacing: 0.04em;
+          box-shadow: 0px 15px 30px rgba(25, 218, 140, 0.25);
+          margin-right: 60px;
+        }
+      }
+    }
+  }
+}

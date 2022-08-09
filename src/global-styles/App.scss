@@ -1,0 +1,87 @@
+/*-------------------------------------------ЦВЕТА-И-ШРИФТЫ------------------------------------------------ */
+
+@import './Variables';
+// @import './New-vartiables';
+
+/*----------------------------------------------ОБНУЛЕНИЕ------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-family: $commonFont;
+  font-style: normal;
+  font-weight: 400;
+}
+img {
+  vertical-align: top;
+}
+
+._ibg {
+  position: relative;
+}
+
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+/*------------------------------------------------------------------------------------------------------ */
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template: minmax(auto, 810px) 1fr minmax(auto, 629px) / 1fr;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
+
+.section-title-one {
+  padding-bottom: 5px;
+  background: url('../img/main/reasons/underline.svg') no-repeat 100% 100%;
+}
+
+.section-title-two {
+  padding-bottom: 5px;
+  background: url('../img/main/plan/underline.svg') no-repeat 100% 100%;
+}
+
+.section-title-three {
+  padding-bottom: 5px;
+  background: url('../img/main/certificate/underline.svg') no-repeat 0% 100%;
+}

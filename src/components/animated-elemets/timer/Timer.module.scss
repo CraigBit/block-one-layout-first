@@ -1,0 +1,59 @@
+@import '../../../global-styles/App.scss';
+
+.timer {
+  display: flex;
+  align-items: center;
+
+  & > *:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.digits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 60px;
+  background: #ffffff;
+  box-shadow: 0px 5px 30px rgba(215, 211, 225, 0.5);
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 119%;
+  letter-spacing: 0.04em;
+  color: #ff652f;
+}
+
+.dots {
+  font-family: $headersFont;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 137.5%;
+  color: $headersColor;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  & > * {
+    width: 70px;
+    font-family: $headersFont;
+    font-size: 16px;
+    line-height: 137.5%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $headersColor;
+  }
+}
+
+.hours {
+  margin: 0px 27px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.highlighted {
+  color: $additionalHighlightColor;
+}

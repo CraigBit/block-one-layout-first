@@ -1,0 +1,25 @@
+@import '../../../global-styles/App.scss';
+
+.conceal {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 19px;
+  height: 19px;
+  border-radius: 6px;
+  border: 2px solid $mainHighlightColor;
+  background: $additionalTextColor;
+  cursor: pointer;
+  user-select: none;
+}
+
+input:checked {
+  background-color: $mainHighlightColor;
+  position: relative;
+  &::before {
+    content: url('../../../img/main/checkbox/check-mark.svg');
+    position: absolute;
+    left: 1.35px;
+    top: -0.5px;
+  }
+}

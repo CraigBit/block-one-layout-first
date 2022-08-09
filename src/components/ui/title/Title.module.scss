@@ -1,0 +1,10 @@
+@import '../../../global-styles/App.scss';
+
+.headerTitle {
+  font-family: $headersFont;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 138%;
+  letter-spacing: 0.04em;
+  color: $headersColor;
+}
